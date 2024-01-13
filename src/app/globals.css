@@ -2,17 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --secondary-glow: linear-gradient(
+    to bottom right,
+    rgba(14, 164, 233, 0),
+    rgba(14, 164, 233, 0),
+    rgba(14, 165, 233, 0.3)
+  );
+
+  --body-background: #f6f6f6;
+  --primary-glow: radial-gradient(rgba(14, 165, 233, 0.3), rgba(14, 164, 1, 0));
+  --scrollbar-tumbl: #b3b3b369;
+  --gradient-title-custom: linear-gradient(#151414, #5e0c7300);
+  --shadow-cursor: 14, 165, 233, 0.15;
 }
+
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --body-background: #020202;
+    --shadow-cursor: 14, 165, 233, 0.15;
+    --gradient-title-custom: linear-gradient(#fff0e1, #5e0c7300);
+    color-scheme: dark;
   }
 }
 
@@ -24,4 +45,126 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  font-family: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+}
+.page_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 4rem 0;
+}
+.page_center::before {
+  content: "";
+  left: 50%;
+  position: absolute;
+  filter: blur(45px);
+  transform: translateZ(0);
+  background: var(--secondary-glow);
+  border-radius: 50%;
+  width: 480px;
+  height: 360px;
+  margin-left: -400px;
+}
+.page_center::after {
+  content: "";
+  left: 50%;
+  position: absolute;
+  filter: blur(45px);
+  transform: translateZ(0);
+  background: var(--primary-glow);
+  width: 240px;
+  height: 180px;
+  z-index: -1;
+}
+.shake-left-right:hover {
+  animation: shake-left-2 0.8s linear both;
+}
+.shake-left-right {
+  animation: shake-left-right 0.8s linear both;
+}
+@keyframes shake-left-right {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+  }
+  10% {
+    transform: rotate(8deg);
+  }
+  20%,
+  40%,
+  60% {
+    transform: rotate(-10deg);
+  }
+  30%,
+  50%,
+  70% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(-8deg);
+  }
+  90% {
+    transform: rotate(8deg);
+  }
+}
+@keyframes shake-left-2 {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+  }
+  10% {
+    transform: rotate(8deg);
+  }
+  20%,
+  40%,
+  60% {
+    transform: rotate(-10deg);
+  }
+  30%,
+  50%,
+  70% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(-8deg);
+  }
+  90% {
+    transform: rotate(8deg);
+  }
+}
+
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+  background-color: rgb(34 197 94 / 1);
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    background-color: rgb(34 197 94 / 1);
+    box-shadow: 0 0 0 0 rgb(74 222 128 / 1);
+  }
+
+  50% {
+    transform: scale(1.2);
+    background-color:rgb(34 197 94 / 1);
+    box-shadow: 0 0 0 10px rgb(74 222 128 / 0);
+  }
+
+  100% {
+    transform: scale(0.8);
+    background-color: rgb(34 197 94 / 1);
+    box-shadow: 0 0 0 0 rgb(74 222 128 / 1);
+  }
 }
