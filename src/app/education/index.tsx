@@ -35,7 +35,7 @@ const educations: EducationType[] = [
   },
   {
     id: 3,
-    title: "Poitécnico de Colombia",
+    title: "Politécnico de Colombia",
     date: "SEP — OCT 2022",
     description: (
       <>

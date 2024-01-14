@@ -19,7 +19,7 @@ export default function Header({}: Props) {
             Desarrollador de Software
           </h2>
           <p className="w-96 max-[700px]:w-full opacity-90 dark:text-neutral-500 text-neutral-900 item-s  leading-5">
-            Constuyo y desarrollo aplicaciones.
+            Construyo y desarrollo aplicaciones.
           </p>
         </div>
         <NavHeader />
