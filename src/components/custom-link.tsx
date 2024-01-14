@@ -8,7 +8,7 @@ const CustomLink = ({children, className }: LinkType) => {
   return (
     <a
       className={cn(
-        'font-medium ml-1 transition-colors dark:text-neutral-50 ',
+        'font-medium ml-1 transition-colors dark:text-neutral-50 text-neutral-900',
         className
       )}
       target="_blank"

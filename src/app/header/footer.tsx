@@ -1,6 +1,6 @@
 import React from 'react'
 import HeaderFooterItem from './footer-item'
-import { GithubIcon, InstagramIcon, LinkedinIcon, SpotifyIcon } from '@/icons'
+import { GithubIcon, LinkedinIcon } from '@/icons'
 
 type Props = {}
 

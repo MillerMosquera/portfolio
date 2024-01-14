@@ -1,4 +1,4 @@
-import { Tooltips } from "./Tooltips";
+import Tooltips from "./Tooltips";
 import FooterHeader from "./footer";
 import NavHeader from "./nav";
 
