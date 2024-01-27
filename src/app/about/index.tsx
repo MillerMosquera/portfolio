@@ -14,7 +14,7 @@ const skill: Skilltype[] = [
 ];
 
 const CV =
-  "https://firebasestorage.googleapis.com/v0/b/portfolio-8d759.appspot.com/o/CV%20MILLER%20MOSQUERA.pdf?alt=media&token=08ad634c-e368-491c-8edc-7dc5ae05fd4e";
+  "https://firebasestorage.googleapis.com/v0/b/portfolio-8d759.appspot.com/o/CV%20Miller.pdf?alt=media&token=d0ce2962-545b-48ac-855e-8a78cc160757";
 
 export default function AboutSection({}: Props) {
   return (
