@@ -15,7 +15,7 @@ export default function FooterHeader({}: Props) {
             icon={<GithubIcon />}
           />
           <HeaderFooterItem
-            href="https://www.linkedin.com/in/millermosquera"
+            href="https://www.linkedin.com/in/millersairmosquera"
             title="Linkedin"
             icon={<LinkedinIcon />}
           />
